@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.5.0](https://github.com/etolbakov/archeologit/compare/v0.4.0...v0.5.0) (2023-11-16)
+
+
+### Features
+
+* add commands, update docs ([#1](https://github.com/etolbakov/archeologit/issues/1)) ([e8f365e](https://github.com/etolbakov/archeologit/commit/e8f365e1f84d4e92d32150f578f4c9648b77a8e8))
+* create the gh workflow with release-please ([#2](https://github.com/etolbakov/archeologit/issues/2)) ([509eb6c](https://github.com/etolbakov/archeologit/commit/509eb6c7fcc16f92910ff9d279dc370b71a6cf2d))
+* improve the gh workflow ([16974bb](https://github.com/etolbakov/archeologit/commit/16974bbde7cc53444b82aa01fc2ec8b0a60f17a0))
+* improve the gh workflow ([#8](https://github.com/etolbakov/archeologit/issues/8)) ([16974bb](https://github.com/etolbakov/archeologit/commit/16974bbde7cc53444b82aa01fc2ec8b0a60f17a0))
+* update readme spacing ([#6](https://github.com/etolbakov/archeologit/issues/6)) ([6ac9632](https://github.com/etolbakov/archeologit/commit/6ac9632d23a981ea5463199829c85cf36c383a54))
+
+
+### Bug Fixes
+
+* add additional debugging output ([2e8d3c2](https://github.com/etolbakov/archeologit/commit/2e8d3c292eb27ec6215766b5a68f21c00507d41a))
+* add additional debugging output ([#10](https://github.com/etolbakov/archeologit/issues/10)) ([2e8d3c2](https://github.com/etolbakov/archeologit/commit/2e8d3c292eb27ec6215766b5a68f21c00507d41a))
+* another release attempt ([#12](https://github.com/etolbakov/archeologit/issues/12)) ([3a7b24d](https://github.com/etolbakov/archeologit/commit/3a7b24d9ef98a3ec2339ad4aafd21c58fe05dcbd))
+* reduce the number of artifacts ([#15](https://github.com/etolbakov/archeologit/issues/15)) ([6a22589](https://github.com/etolbakov/archeologit/commit/6a225891001bdc720c7a528491fecda9d77a8184))
+
 ## [0.4.0](https://github.com/etolbakov/archeologit/compare/v0.3.2...v0.4.0) (2023-11-16)
 
 
