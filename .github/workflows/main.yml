@@ -13,6 +13,8 @@ env:
   PACKAGE_NAME: archeologit
 
 jobs:
+
+
   # Update release PR
   release_please:
     name: Execute release chores
@@ -30,6 +32,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           package-name: ${{ env.PACKAGE_NAME }}
           release-type: rust
+          draft: true
+          extra-files: |
+            README.md
 
   github_build:
     name: Build release binaries
