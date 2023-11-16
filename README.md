@@ -83,10 +83,10 @@ q
 </details>
 
 ### Review 
-1. 🦀  error handling / `unwrap` usage
+1. 🦀 error handling / `unwrap` usage
 2. 🦀 string to enum conversion
-3. 🦀 ` let key = format!("{:?}", item.status());` => what is the correct `enum->string` conversion
-4. 🦀`mut` vec & inline
+3. 🦀 `let key = format!("{:?}", item.status());` => what is the correct `enum->string` conversion
+4. 🦀 `mut` vec & inline
 this works fine
 ```rust 
   let vec: &mut Vec<&str> = entry.get_mut();
