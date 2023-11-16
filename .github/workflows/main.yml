@@ -88,15 +88,13 @@ jobs:
     needs: [release_please, github_build]
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Setup | Artifacts
         uses: actions/download-artifact@v3
 
-      - name: Create Release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ needs.release_please.outputs.tag_name }}
-          name: archeologit
-          prerelease: false
-          artifacts: archeologit-*/archeologit-*
+      - name: Upload Release Artifact
+        if: ${{ steps.release_please.outputs.release_created }}
+        run:
+          gh release upload ${{ steps.release_please.outputs.tag_name }} archeologit-*/archeologit-*
+
