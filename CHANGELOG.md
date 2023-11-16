@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/etolbakov/archeologit/compare/v0.5.0...v0.5.1) (2023-11-16)
+
+
+### Bug Fixes
+
+* adjust the upload_artifacts step ([#20](https://github.com/etolbakov/archeologit/issues/20)) ([cfaea7e](https://github.com/etolbakov/archeologit/commit/cfaea7ecb87cf821fa64f90b5ba45376fe34d08c))
+
 ## [0.5.0](https://github.com/etolbakov/archeologit/compare/v0.4.0...v0.5.0) (2023-11-16)
 
 
