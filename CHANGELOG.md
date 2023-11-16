@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/etolbakov/archeologit/compare/v0.3.0...v0.3.1) (2023-11-16)
+
+
+### Bug Fixes
+
+* add additional debugging output ([2e8d3c2](https://github.com/etolbakov/archeologit/commit/2e8d3c292eb27ec6215766b5a68f21c00507d41a))
+* add additional debugging output ([#10](https://github.com/etolbakov/archeologit/issues/10)) ([2e8d3c2](https://github.com/etolbakov/archeologit/commit/2e8d3c292eb27ec6215766b5a68f21c00507d41a))
+
 ## [0.3.0](https://github.com/etolbakov/archeologit/compare/v0.2.0...v0.3.0) (2023-11-16)
 
 
