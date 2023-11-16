@@ -13,6 +13,34 @@ env:
   PACKAGE_NAME: archeologit
 
 jobs:
+  
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      val: ${{ steps.plan.outputs.manifest }}
+      tag: ${{ !github.event.pull_request && github.ref_name || '' }}
+      tag-flag: ${{ !github.event.pull_request && format('--tag={0}', github.ref_name) || '' }}
+      publishing: ${{ !github.event.pull_request }}
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Install cargo-dist
+        run: "curl --proto '=https' --tlsv1.2 -LsSf https://github.com/axodotdev/cargo-dist/releases/download/v0.4.0/cargo-dist-installer.sh | sh"
+      - id: plan
+        run: |
+          cargo dist plan ${{ !github.event.pull_request && format('--tag={0}', github.ref_name) || '' }} --output-format=json > dist-manifest.json
+          echo "cargo dist plan ran successfully"
+          cat dist-manifest.json
+          echo "manifest=$(jq -c "." dist-manifest.json)" >> "$GITHUB_OUTPUT"
+      - name: "Upload dist-manifest.json"
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts
+          path: dist-manifest.json
+
   # Update release PR
   release_please:
     name: Execute release chores
@@ -30,6 +58,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           package-name: ${{ env.PACKAGE_NAME }}
           release-type: rust
+          draft: true
 
   github_build:
     name: Build release binaries
