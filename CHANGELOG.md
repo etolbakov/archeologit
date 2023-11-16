@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/etolbakov/archeologit/compare/v0.2.0...v0.3.0) (2023-11-16)
+
+
+### Features
+
+* improve the gh workflow ([16974bb](https://github.com/etolbakov/archeologit/commit/16974bbde7cc53444b82aa01fc2ec8b0a60f17a0))
+* improve the gh workflow ([#8](https://github.com/etolbakov/archeologit/issues/8)) ([16974bb](https://github.com/etolbakov/archeologit/commit/16974bbde7cc53444b82aa01fc2ec8b0a60f17a0))
+
 ## [0.2.0](https://github.com/etolbakov/archeologit/compare/v0.1.0...v0.2.0) (2023-11-16)
 
 
