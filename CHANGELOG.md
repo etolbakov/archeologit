@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.5](https://github.com/etolbakov/archeologit/compare/v0.5.4...v0.5.5) (2023-11-16)
+
+
+### Bug Fixes
+
+* update with plan ([#28](https://github.com/etolbakov/archeologit/issues/28)) ([0a81ce5](https://github.com/etolbakov/archeologit/commit/0a81ce5e394845f21789a29f8f332f834af61831))
+
 ## [0.5.4](https://github.com/etolbakov/archeologit/compare/v0.5.3...v0.5.4) (2023-11-16)
 
 
