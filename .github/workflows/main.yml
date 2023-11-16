@@ -5,7 +5,8 @@ on:
 
 env:
   CARGO_TERM_COLOR: always
-
+  PACKAGE_NAME: archeologit
+  
 jobs:
 
   build-test:
@@ -22,8 +23,8 @@ jobs:
       - uses: swatinem/rust-cache@v2
       - name: Build
         run: >
-          cargo build
-          --verbose
+          cargo release
+          ls -lah
       - name: "Upload archeologit"
         uses: actions/upload-artifact@v3
         with:
@@ -50,11 +51,13 @@ jobs:
         with:
           name: artifacts
           path: artifacts
+      - name: show ls
+        run: >
+          ls -lah
       - uses: google-github-actions/release-please-action@v3
         id: release
         with:
-          package-name: ${{ env.PACKAGE }}
+          package-name: ${{ env.PACKAGE_NAME }}
           release-type: rust
           extra-files: |
             artifacts/*
-
