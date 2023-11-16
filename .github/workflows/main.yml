@@ -3,6 +3,11 @@ name: Main
 on:
   push:
 
+permissions:
+  contents: write
+  pull-requests: write
+
+  
 env:
   CARGO_TERM_COLOR: always
   PACKAGE_NAME: archeologit
