@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.2](https://github.com/etolbakov/archeologit/compare/v0.5.1...v0.5.2) (2023-11-16)
+
+
+### Bug Fixes
+
+* add permissions ([#22](https://github.com/etolbakov/archeologit/issues/22)) ([5d9d596](https://github.com/etolbakov/archeologit/commit/5d9d596c314c32068f0d358efaa5c7b5b0388bfc))
+
 ## [0.5.1](https://github.com/etolbakov/archeologit/compare/v0.5.0...v0.5.1) (2023-11-16)
 
 
