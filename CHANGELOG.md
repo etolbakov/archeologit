@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.3](https://github.com/etolbakov/archeologit/compare/v0.5.2...v0.5.3) (2023-11-16)
+
+
+### Bug Fixes
+
+* gh release tool ([#24](https://github.com/etolbakov/archeologit/issues/24)) ([24b1640](https://github.com/etolbakov/archeologit/commit/24b164027d99d4daccd18b41064bd9ce84f272ab))
+
 ## [0.5.2](https://github.com/etolbakov/archeologit/compare/v0.5.1...v0.5.2) (2023-11-16)
 
 
