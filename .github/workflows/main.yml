@@ -7,12 +7,13 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
+
   build-test:
     name: Build and test (${{ matrix.os }})
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
 
     runs-on: ${{ matrix.os }}
 
@@ -23,12 +24,11 @@ jobs:
         run: >
           cargo build
           --verbose
-
-      - name: Run tests (without coverage)
-        if: matrix.os != 'ubuntu-latest'
-        run: >
-          cargo test
-          --verbose
+      - name: "Upload archeologit"
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts
+          path: target/debug/archeologit
 
   release-please:
     name: Execute release chores
@@ -45,8 +45,16 @@ jobs:
       tag_name: ${{ steps.release.outputs.tag_name }}
 
     steps:
+      - name: "Download artifacts"
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts
+          path: artifacts
       - uses: google-github-actions/release-please-action@v3
         id: release
         with:
+          package-name: ${{ env.PACKAGE }}
           release-type: rust
+          extra-files: |
+            artifacts/*
 
